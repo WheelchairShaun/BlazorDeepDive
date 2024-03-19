@@ -1,4 +1,6 @@
-﻿<p>@server.Name is in @server.City</p>
+﻿<div id="@server.Name?.ReplaceWhiteSpaceWithDashes()">
+	<p>@server.Name is in @server.City</p>
+</div>
 
 @code {
 	private Server server = new Server
