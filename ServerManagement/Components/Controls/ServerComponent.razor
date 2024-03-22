@@ -1,5 +1,6 @@
-﻿<div id="@server.Name?.ReplaceWhiteSpaceWithDashes()">
-	<p>@server.Name is in @server.City</p>
+﻿<div data-name="@server.Name" data-status="Server is @(server.IsOnline ? "online" : "offline")"
+	 style="@($"color: {(server.IsOnline ? "green" : "red")}")">
+	<p>@server.Name is in @server.City that is @(server.IsOnline ? "online" : "offline").</p>
 </div>
 
 @code {
